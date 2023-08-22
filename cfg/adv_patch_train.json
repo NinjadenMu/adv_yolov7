@@ -1,0 +1,12 @@
+{
+    "save_dir": "patches/",
+
+    "patch_size": [64, 64],
+
+    "loss_target": "obj",
+
+    "lr": 0.3,
+    "epochs": 10,
+
+    "batch_size": 1
+}

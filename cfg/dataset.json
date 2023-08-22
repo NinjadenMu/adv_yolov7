@@ -1,0 +1,11 @@
+{
+    "images_dir": "data/images/100k/",
+    "labels_dir": "data/labels/det_20/",
+
+    "split": "train",
+
+    "image_shape": [1280, 720],
+
+    "label_to_id": {"pedestrian": 0, "rider": 0, "car": 2, "truck": 7, "bus": 5, "train": 6, "motorcycle": 3, "bicycle": 1, "traffic light": 9, "traffic sign": 11, "other vehicle": 7, "trailer": 7, "other person": 0}
+
+}
