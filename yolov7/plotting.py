@@ -38,7 +38,7 @@ def draw_bboxes(
     bboxes,
     class_labels=None,
     color_1="black",
-    color_2="white",
+    color_2="red",
     get_rectangle_corners_fn=get_rectangle_params_from_pascal_bbox,
 ):
     if class_labels is not None:

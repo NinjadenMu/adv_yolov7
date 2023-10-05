@@ -3,6 +3,7 @@
     "labels_dir": "data/labels/det_20/",
 
     "split": "train",
+    "percent_to_use": 0.0001,
 
     "image_shape": [1280, 720],
 
