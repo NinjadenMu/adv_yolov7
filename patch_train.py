@@ -31,7 +31,7 @@ import torchvision
 from PIL import Image
 
 import copy
-
+print(torch.__version__)
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 model = create_yolov7_model('yolov7').to(device)

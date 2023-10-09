@@ -62,7 +62,7 @@ class Yolov7Dataset(Dataset):
         rgb_img = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
         transform = transforms.ToTensor()
-        tensor = transform(image) / 255
+        tensor = transform(rgb_img) / 255
         tensor.requires_grad = True
 
         return tensor

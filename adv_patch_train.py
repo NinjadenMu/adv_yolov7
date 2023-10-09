@@ -25,7 +25,7 @@ import json
 
 from tqdm import tqdm
 
-
+print(torch.__version__)
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 model = create_yolov7_model('yolov7').to(device)
@@ -48,8 +48,17 @@ image = cv2.imread('data/images/100k/val/b1c9c847-3bda4659.jpg')
 image = cv2.resize(image, (640, 640))
 transform = transforms.ToTensor()
 tensor = transform(image)[None, :]
+print(image.shape)
 
-output = model(tensor)
+import time
+
+start = time.perf_counter()
+frames = 0
+while time.perf_counter() - start < 10:
+    output = model(tensor)
+    frames += 1
+print(frames)
+
 preds = model.postprocess(output)
 nms_predictions = filter_eval_predictions(preds, confidence_threshold=0.25)
 #print(nms_predictions[0])
